@@ -16,7 +16,7 @@ app.post('/todos',async (req,res)=>{
         return
     }
     else{
-        await database.Insert(createpayload.title,createpayload.description,createpayload.completed);
+        await database.Insert(createpayload.title,createpayload.description,false);
         res.status(200).json({
             msg:"payload created"
         })

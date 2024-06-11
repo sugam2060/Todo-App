@@ -17,7 +17,7 @@ async function Insert(title,description,completed){
     const Payload = new PayloadSchema({
         title: title,
         description:description,
-        completed
+        completed: completed
     })
 
     await Payload.save();
